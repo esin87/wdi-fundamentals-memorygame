@@ -102,3 +102,15 @@ footer {
 a:hover {
 	border-color: white;
 }
+
+.socialmedia {
+	color: #F15B31;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.socialmedia:hover {
+	background-color: #F15B31;
+	color: white;
+}
