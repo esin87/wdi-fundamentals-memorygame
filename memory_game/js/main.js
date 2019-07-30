@@ -1,45 +1,49 @@
 
-var cards = ['queen', 'queen', 'king', 'king'];
-//Array of cards - one string for each card.
+var cards = [
+{
+	rank: 'queen',
+	suite: 'hearts',
+	cardImage: 'images/queen-of-hearts.png'
+},
+{
+	rank: 'queen',
+	suite: 'diamonds',
+	cardImage: 'images/queen-of-diamonds.png'
+},
+{
+	rank: 'king', 
+	suite: 'hearts',
+	cardImage: 'images/king-of-hearts.png'
+},
+{
+	rank: 'king', 
+	suite: 'diamonds',
+	cardImage: 'images/king-of-diamonds.png'
+}
+];
+//Create four objects, one for each card
 
 var cardsInPlay = [];
 //Will hold cards in play.
 
 function checkForMatch() {
 	if (cardsInPlay[0] === cardsInPlay[2]) {
-  	console.log("You found a match!");
+  	alert('You found a match!');
 } else {
-  	console.log("Sorry, try again.");
+  	alert('Sorry, try again.');
 }
 };
 
 function flipCard(cardId){
-	console.log('User flipped ' + cards[cardId]);
-	cardsInPlay.push(cards[cardId]);
+	console.log('User flipped ' + cards[cardId].rank);
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suite);
+	cardsInPlay.push(cards[cardId].rank);
 	if (cardsInPlay.length === 2) {
 			checkForMatch();
-	}
+	};
 }
 
 flipCard(0);
 flipCard(2);
 
-/*const cardOne = cards[0];
-cardsInPlay.push('cardOne');
-
-console.log('User flipped queen');
-//Displays card that user flipped.
-
-const cardTwo = cards[2];
-cardsInPlay.push('cardTwo');
-//Adds cardTwo to end of cards in play array.
-console.log('User flipped king');
-//Displays second card that user flipped.
-
-checkForMatch deleted: 
-	if (cardsInPlay.length === 2 && cardsInPlay[0]===cardsInPlay[2]) {
-	alert('You found a match!'); 
-} else {
-	alert('Sorry, try again.');
-}
-*/
